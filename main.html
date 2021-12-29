@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="header">
+            <h1>Twitter Clone</h1>
+            <h2>Aktualny użytkownik: <div id="current-user">...</div></h2>
+
+            <form id="create-user">
+                <input name="username" type="text">
+                <input value="Zmień użytkownika" type="button" onclick="changeUser()">
+            </form>
+
+            <p style="font-style: italic;">Podanie nieużywanej jeszcze nazwy użytkownika powoduje automatyczną rejestrację.</p>
+
+        </div>
+
+        <div id="content">
+        
+            <div id="users">
+                <div>
+                    <p>Obserwowani użytownicy</p>
+                    <ul id='followed'>
+                    </ul>
+                </div>
+                <div>
+                    <p>Proponowi użytkownicy do obserwowania</p>
+                    <ul id='to-follow'>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="create-post-div">
+                <form id='create-post'>
+                    <textarea id="new-post-content" name="new-post-content" rows="6" cols="40"></textarea>
+                    <input value="Dodaj post" type="button" onclick="createPost()">
+                </form>
+            </div>
+
+            <hr>
+
+            <div id="posts">
+                <div>
+                    <p>User's posts:</p>
+                    <div id='user-posts'>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Followed posts:</p>
+                    <div id='followed-posts'>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
