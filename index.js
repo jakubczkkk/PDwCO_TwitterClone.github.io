@@ -11,7 +11,6 @@ function follow(userToFollow) {
   fetch(url + "follow", { 
     method: "POST", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors', 
     body: JSON.stringify(follow) 
   })
   .then(res => { 
@@ -33,7 +32,6 @@ function unfollow(userToUnfollow) {
   fetch(url + "unfollow", { 
     method: "POST", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors', 
     body: JSON.stringify(unfollow) 
   })
   .then(res => { 
@@ -56,7 +54,6 @@ function changeUser() {
   fetch(url + "user", { 
     method: "POST", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors', 
     body: JSON.stringify(user) 
   })
   .then(res => { 
@@ -77,7 +74,6 @@ function getSuggestedFollowed() {
   fetch(url + `suggested_followers/${username}`, { 
     method: "GET", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}
-    // mode: 'cors'
   })
   .then(res => res.json())
   .then(json => {
@@ -94,7 +90,6 @@ function getFollowed() {
   fetch(url + `followed/${username}`, { 
     method: "GET", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors'
   })
   .then(res => res.json())
   .then(json => {
@@ -123,7 +118,6 @@ function createPost() {
   fetch(url + "post", { 
     method: "POST", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors', 
     body: JSON.stringify(post) 
   })
   .then(res => { 
@@ -142,7 +136,6 @@ function getUserPosts() {
   fetch(url + `post/${username}`, { 
     method: "GET", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'} 
-    // mode: 'cors'
   })
   .then(res => res.json())
   .then(json => {
@@ -159,7 +152,6 @@ function getFollowedPosts() {
   fetch(url + `post/followed/${username}`, { 
     method: "GET", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors'
   })
   .then(res => res.json())
   .then(json => {
@@ -185,7 +177,6 @@ function addPost(post) {
   fetch(url + `comment/${post[1]}`, { 
     method: "GET", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors'
   })
   .then(res => res.json())
   .then(json => {
@@ -216,7 +207,6 @@ function addFollowedPost(post) {
   fetch(url + `comment/${post[2]}`, { 
     method: "GET", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'} 
-    // mode: 'cors'
   })
   .then(res => res.json())
   .then(json => {
@@ -314,7 +304,6 @@ function sendComment(postId, content) {
   fetch(url + "comment", { 
     method: "POST", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors', 
     body: JSON.stringify(comment) 
   })
   .then(res => { 
@@ -334,7 +323,6 @@ function sendLike(postId) {
   fetch(url + "like", { 
     method: "POST", 
     headers: {'Access-Control-Allow-Origin': '*', 'Content-type': 'application/json'}, 
-    // mode: 'cors', 
     body: JSON.stringify(like) 
   })
   .then(res => { 
